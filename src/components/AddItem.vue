@@ -27,15 +27,14 @@
 </template>
 
 <script>
-
 import { db } from '../main'
 
 export default {
     name: 'AddItem',
     firestore() {
-      return { 
-        items: db.collection('items'),
-      }
+        return {
+            items: db.collection('items'),
+        }
     },
     data() {
         return {

@@ -1,8 +1,8 @@
 <template>
     <div class="home">
-        <v-app>
-            <v-container grid-list-md text-xs-center>
-                <v-layout row wrap>
+        <v-app grid-list-md text-xs-center>
+            <v-container>
+                <v-layout row wrap id="intro">
                     <v-flex xs12 md6 offset-md3>
                         <v-card>
                             <v-container>
@@ -25,15 +25,8 @@
                         </v-card>
                     </v-flex>
                 </v-layout>
+                <item-container></item-container>
             </v-container>
-
-            <v-layout row wrap>
-                <v-flex xs12 md6 offset-md3>
-                    <v-card>
-                        <add-item></add-item>
-                    </v-card>
-                </v-flex>
-            </v-layout>
         </v-app>
     </div>
 </template>
@@ -42,13 +35,15 @@
 import firebase from 'firebase'
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
-import AddItem from '@/components/AddItem.vue'
+//import AddItem from '@/components/AddItem.vue'
+import ItemContainer from '@/components/ItemContainer.vue'
 
 export default {
     name: 'home',
     components: {
         'hello-word': HelloWorld,
-        'add-item': AddItem,
+        'item-container': ItemContainer,
+        //'add-item': AddItem,
     },
     methods: {
         logout: function() {
@@ -66,5 +61,8 @@ export default {
 <style>
 #bluebuttom {
     margin: 10px 110px;
+}
+#intro {
+    margin-bottom: 1%;
 }
 </style>

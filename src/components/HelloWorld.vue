@@ -1,9 +1,7 @@
 <template>
     <div class="hello">
         <h1>{{ msg }}</h1>
-        <p>
-            This is a basic example<br />
-        </p>
+        <p>This is a basic example<br /></p>
     </div>
 </template>
 
