@@ -6,7 +6,7 @@
                     <v-flex xs12 md6 offset-md3>
                         <v-card>
                             <v-container>
-                                <HelloWorld msg="Welcome to Your Vue.js App" />
+                                <hello-word msg="Welcome to Your Vue.js App" />
                                 <v-layout
                                     align-center
                                     justify-center
@@ -26,6 +26,14 @@
                     </v-flex>
                 </v-layout>
             </v-container>
+
+            <v-layout row wrap>
+                <v-flex xs12 md6 offset-md3>
+                    <v-card>
+                        <add-item></add-item>
+                    </v-card>
+                </v-flex>
+            </v-layout>
         </v-app>
     </div>
 </template>
@@ -34,10 +42,13 @@
 import firebase from 'firebase'
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
+import AddItem from '@/components/AddItem.vue'
+
 export default {
     name: 'home',
     components: {
-        HelloWorld,
+        'hello-word': HelloWorld,
+        'add-item': AddItem,
     },
     methods: {
         logout: function() {

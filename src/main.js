@@ -10,10 +10,14 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
 import colors from 'vuetify/es5/util/colors'
 
-import firebase from 'firebase'
+// Firebase configuration
+import Firebase from 'firebase'
+import firebaseConfig from './../config.json'
+import '@firebase/firestore'
+import VueFirestore from 'vue-firestore'
+
 import App from './App.vue'
 import router from './router'
-import firebaseConfig from './../config.json'
 
 Vue.config.productionTip = false
 
@@ -26,7 +30,12 @@ const config = {
     storageBucket: firebaseConfig.PROJECTID + '.appspot.com',
     messagingSenderId: '518955145087',
 }
-firebase.initializeApp(config)
+
+Vue.use(VueFirestore)
+
+// Firebase configuration
+let app = Firebase.initializeApp(config)
+export const db = app.firestore()
 
 // To use VueMaterial
 //Vue.use(VueMaterial)

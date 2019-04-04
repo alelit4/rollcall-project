@@ -13,8 +13,10 @@
     "firebase": "^5.9.2",
     "prettier": "^1.16.4",
     "vue": "^2.6.6",
+    "vue-firestore": "^0.3.21",
     "vue-material": "^1.0.0-beta-10.2",
     "vue-router": "^3.0.1",
+    "vuefire": "^1.4.5",
     "vuetify": "^1.5.9"
   },
   "devDependencies": {
