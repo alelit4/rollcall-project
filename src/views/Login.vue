@@ -1,23 +1,54 @@
 <template>
     <div class="login">
-        <h3>Sign In</h3>
-        <input type="text" v-model="email" placeholder="Email" /><br />
-        <input
-            type="password"
-            v-model="password"
-            placeholder="Password"
-        /><br />
-        <button @click="login">Connection</button>
-        <p>
-            or Sign In with Google <br />
-            <button @click="socialLogin" class="social-button">
-                <img alt="Google Logo" src="../assets/logo.png" />
-            </button>
-        </p>
-        <p>
-            You don't have an account ? You can
-            <router-link to="/signup">create one</router-link>
-        </p>
+        <v-app>
+            <v-container grid-list-md text-xs-center>
+                <v-layout row wrap>
+                    <v-flex xs12 md6 offset-md3>
+                        <v-card>
+                            <h3>Sign In</h3>
+                            <v-layout row>
+                                <v-flex xs8 offset-xs2 md5 offset-md3>
+                                    <v-text-field
+                                        v-model="email"
+                                        label="Email address"
+                                        value="example"
+                                    ></v-text-field>
+                                </v-flex>
+                            </v-layout>
+                            <v-layout row>
+                                <v-flex xs8 offset-xs2 md5 offset-md3>
+                                    <v-text-field
+                                        v-model="password"
+                                        label="Password"
+                                        value="password"
+                                    ></v-text-field>
+                                </v-flex>
+                            </v-layout>
+
+                            <v-btn @click="login">Login</v-btn>
+                            <p>
+                                or Sign In with Google <br />
+                                <button
+                                    @click="socialLogin"
+                                    class="social-button"
+                                >
+                                    <img
+                                        alt="Google Logo"
+                                        src="../assets/google-logo.png"
+                                    />
+                                </button>
+                            </p>
+                            <p>
+                                You don't have an account ? You can
+                                <router-link to="/signup"
+                                    >create one</router-link
+                                >
+                            </p>
+                        </v-card>
+                    </v-flex>
+                </v-layout>
+            </v-container>
+        </v-app>
     </div>
 </template>
 
