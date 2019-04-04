@@ -24,10 +24,22 @@
                                     ></v-text-field>
                                 </v-flex>
                             </v-layout>
-
-                            <v-btn @click="login">Login</v-btn>
-                            <p>
-                                or Sign In with Google <br />
+                            <v-layout
+                                align-center
+                                justify-center
+                                row
+                                fill-height
+                            >
+                                <v-btn
+                                    block
+                                    id="bluebuttom"
+                                    color="secondary"
+                                    @click="login"
+                                    >Login</v-btn
+                                >
+                            </v-layout>
+                            <v-flex xs8 offset-xs2 md6 offset-md3>
+                                <p>or Sign In with Google <br /></p>
                                 <button
                                     @click="socialLogin"
                                     class="social-button"
@@ -37,13 +49,14 @@
                                         src="../assets/google-logo.png"
                                     />
                                 </button>
-                            </p>
-                            <p>
-                                You don't have an account ? You can
-                                <router-link to="/signup"
-                                    >create one</router-link
-                                >
-                            </p>
+
+                                <p>
+                                    You don't have an account ? You can
+                                    <router-link to="/signup"
+                                        >create one</router-link
+                                    >
+                                </p>
+                            </v-flex>
                         </v-card>
                     </v-flex>
                 </v-layout>
@@ -97,6 +110,11 @@ export default {
 .login {
     margin-top: 40px;
 }
+
+#bluebuttom {
+    margin: 10px 110px;
+}
+
 input {
     margin: 10px 0;
     width: 20%;

@@ -24,8 +24,13 @@
                                     ></v-text-field>
                                 </v-flex>
                             </v-layout>
-
-                            <v-btn @click="signUp">Sign Up</v-btn>
+                            <v-btn
+                                block
+                                id="bluebuttom"
+                                color="secondary"
+                                @click="signUp"
+                                >Sign Up</v-btn
+                            >
                             <span
                                 >or go back to
                                 <router-link to="/login">login</router-link
@@ -86,5 +91,9 @@ span {
     display: block;
     margin-top: 20px;
     font-size: 11px;
+}
+
+#bluebuttom {
+    margin: 10px 110px;
 }
 </style>

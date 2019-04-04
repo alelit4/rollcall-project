@@ -1,6 +1,6 @@
 <template>
     <div class="hello">
-        <v-toolbar>
+        <v-toolbar color="primary" class="white--text">
             <!-- <v-toolbar-side-icon></v-toolbar-side-icon>-->
             <v-toolbar-title>Rollcall</v-toolbar-title>
             <!-- <v-spacer></v-spacer>

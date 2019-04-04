@@ -36,8 +36,8 @@ firebase.initializeApp(config)
 // My Custom theme
 Vue.use(Vuetify, {
     theme: {
-        primary: colors.purple,
-        secondary: colors.grey.darken1,
+        primary: '#4a148c',
+        secondary: '#00bcd4',
         accent: colors.shades.black,
         error: colors.red.accent3,
     },

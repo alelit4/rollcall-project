@@ -7,7 +7,20 @@
                         <v-card>
                             <v-container>
                                 <HelloWorld msg="Welcome to Your Vue.js App" />
-                                <v-btn @click="logout">Logout</v-btn>
+                                <v-layout
+                                    align-center
+                                    justify-center
+                                    row
+                                    fill-height
+                                >
+                                    <v-btn
+                                        block
+                                        id="bluebuttom"
+                                        color="secondary"
+                                        @click="logout"
+                                        >Logout</v-btn
+                                    >
+                                </v-layout>
                             </v-container>
                         </v-card>
                     </v-flex>
@@ -38,3 +51,9 @@ export default {
     },
 }
 </script>
+
+<style>
+#bluebuttom {
+    margin: 10px 110px;
+}
+</style>
