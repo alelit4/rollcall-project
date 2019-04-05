@@ -5,7 +5,7 @@
             <v-tab ripple class="white--text"> Add Item </v-tab>
             <v-tab-item>
                 <v-card flat fill-height fluid>
-                    <add-item></add-item>
+                    <see-items></see-items>
                 </v-card>
             </v-tab-item>
             <v-tab-item>
@@ -19,11 +19,13 @@
 
 <script>
 import AddItem from '@/components/AddItem.vue'
+import SeeItems from '@/components/SeeItem.vue'
 
 export default {
     name: 'item-container',
     components: {
         'add-item': AddItem,
+        'see-items': SeeItems,
     },
 }
 </script>

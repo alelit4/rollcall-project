@@ -7,15 +7,15 @@
                     <v-flex xs8 offset-xs2 md5 offset-md3>
                         <v-text-field
                             v-model="newItem.name"
-                            label="name"
-                            value="name"
+                            label="Name"
+                            value="Name"
                         ></v-text-field>
                     </v-flex>
                     <v-flex xs8 offset-xs2 md5 offset-md3>
                         <v-text-field
-                            v-model="newItem.price"
-                            label="price"
-                            value="price"
+                            v-model="newItem.surname"
+                            label="Surname"
+                            value="Surname"
                         ></v-text-field>
                     </v-flex>
 
@@ -40,7 +40,7 @@ export default {
         return {
             newItem: {
                 name: '',
-                price: '',
+                surname: '',
             },
         }
     },
@@ -49,7 +49,7 @@ export default {
             db.collection('items')
                 .add({
                     name: this.newItem.name,
-                    price: this.newItem.price,
+                    surname: this.newItem.surname,
                 })
                 .then(function(docRef) {
                     console.log('Document written with ID: ', docRef.id)
@@ -59,7 +59,7 @@ export default {
                 })
 
             this.newItem.name = ''
-            this.newItem.price = ''
+            this.newItem.surname = ''
         },
     },
 }
